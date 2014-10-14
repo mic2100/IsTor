@@ -1,0 +1,24 @@
+{
+    "name": "mic2100/IsTor",
+    "description": "Detects whether the current visitor accessing your site from a Tor network exit point",
+    "keywords": ["tor", "tor server detection"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.3.*"
+    },
+    "authors": [
+        {
+            "name": "Michael Bardsley",
+            "email": "me@mic-b.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mic2100\\IsTor\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
