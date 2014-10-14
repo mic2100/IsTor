@@ -3,10 +3,12 @@ IsTor?
 
 Detect whether a visitor is accessing your site from the Tor network.
 
+Usage
+=====
+
+Getting the Tor ip addresses
 ```php
 $filename = sys_get_temp_dir() . '/ips.ip';
-$ip = $_SERVER['REMOTE_ADDR'];
-
 $storage = new Storage\FileStorage;
 $engine = new Engine;
 $subscriptions = new Subscriptions($engine, $storage);
@@ -18,9 +20,18 @@ $ip = '11.12.13.14';
 $subscriptions->addSubscription(new Tor($ip))
               ->setName($filename)
               ->retrieve();
+```
 
+Checking the user
+```php
+$filename = sys_get_temp_dir() . '/ips.ip';
+$storage = new Storage\FileStorage;
+$engine = new Engine;
+$subscriptions = new Subscriptions($engine, $storage);
+$assessor = new Assessor($engine, $storage);
 
-//This needs to be ran on each of the
+//This needs to be ran on each of the requests that are received from users
+//Ideally the isTor method responses can be cached in APC (or other caching system)
 $ip = $_SERVER['REMOTE_ADDR'];
 
 if ($assessor->setName($filename)->isTor($ip)) {
