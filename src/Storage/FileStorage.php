@@ -13,7 +13,6 @@ use Mic2100\IsTor\Exception\InvalidCacheNameException;
  */
 class FileStorage extends AbstractStorage
 {
-    const CACHE_NAME = 'isTor-collector-storage-file';
     const MISSING_NAME_READ = 'You must set a filename before trying to read the data';
     const MISSING_NAME_WRITE = 'You must set a filename before trying to write the data';
     const MISSING_NAME_UPDATE = 'You must set a filename before checking if an update is required';
