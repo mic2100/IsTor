@@ -1,5 +1,5 @@
 {
-    "name": "mic2100/IsTor",
+    "name": "mic2100/is-tor",
     "description": "Detects whether the current visitor accessing your site from a Tor network exit point",
     "keywords": ["tor", "tor server detection"],
     "license": "MIT",
