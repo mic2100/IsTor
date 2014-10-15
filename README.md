@@ -34,7 +34,7 @@ $assessor = new Assessor($engine, $storage);
 //Ideally the isTor method responses can be cached in APC (or other caching system)
 $ip = $_SERVER['REMOTE_ADDR'];
 
-if ($assessor->setName($filename)->isTor($ip)) {
+if ($assessor->setStorageName($filename)->isTor($ip)) {
     //the current visitor is accessing your site through the Tor network
 }
 

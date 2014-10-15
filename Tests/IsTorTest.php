@@ -25,11 +25,9 @@ class IsTorTest extends PHPUnit_Framework_TestCase
             ->setName($filename)
             ->retrieve();
 
-        if ($assessor->setName($filename)->isTor($ip)) {
-            echo 'Found';
+        if ($assessor->setStorageName($filename)->isTor($ip)) {
+            $this->assertTrue(true);
         }
-
-        echo 'Not Found';
 
         $this->assertTrue(true);
     }

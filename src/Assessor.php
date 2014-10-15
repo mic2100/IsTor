@@ -49,13 +49,11 @@ class Assessor
     /**
      * Gets the name
      *
-     * @return \Mic2100\IsTor\Assessor
+     * @return string
      */
-    public function getName()
+    public function getStorageName()
     {
-        $this->storage->getName();
-
-        return $this;
+        return $this->storage->getName();
     }
 
     /**
@@ -64,7 +62,7 @@ class Assessor
      * @param string $name
      * @return \Mic2100\IsTor\Assessor
      */
-    public function setName($name)
+    public function setStorageName($name)
     {
         $this->storage->setName($name);
 

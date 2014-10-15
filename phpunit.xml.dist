@@ -13,7 +13,7 @@
 
     <testsuites>
         <testsuite name="mic2100 - IsTor Tests">
-            <directory>tests/</directory>
+            <directory>Tests/</directory>
         </testsuite>
     </testsuites>
 

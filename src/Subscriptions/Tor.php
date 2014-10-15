@@ -3,7 +3,6 @@
 namespace Mic2100\IsTor\Subscriptions;
 
 use ArrayIterator;
-use Mic2100\IsTor\Subscriptions\SubscriptionInterface;
 
 /**
  * IsTor?
@@ -51,7 +50,7 @@ class Tor implements SubscriptionInterface
         \curl_setopt($ch, CURLOPT_URL, $url);
         \curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         \curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-        $ips = new ArrayIterator();
+        $ips = new ArrayIterator;
         $rows = new ArrayIterator(explode(PHP_EOL, trim(\curl_exec($ch))));
         \curl_close($ch);
 
@@ -62,6 +61,7 @@ class Tor implements SubscriptionInterface
             }
         }, $ips);
         unset($rows);
+
         return $ips;
     }
 }
