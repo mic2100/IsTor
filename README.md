@@ -40,3 +40,5 @@ if ($assessor->setStorageName($filename)->isTor($ip)) {
 
 //the current visitor is not accessing your site through the Tor network
 ```
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mic2100/is-tor/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
